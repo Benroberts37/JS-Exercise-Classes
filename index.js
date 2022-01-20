@@ -90,7 +90,7 @@ if (distance <= driveableMiles) {
   this.odometer = this.odometer + distance;
   this.tank = this.tank - (distance / this.milesPerGallon)
 }else{
-  this.odometer = this.odemter + driveableMiles
+  this.odometer = this.odometer + driveableMiles
   this.tank = 0
   return `I ran out of fuel at ${this.odometer} miles!`
 }
@@ -116,7 +116,7 @@ class Lambdasian {
     this.location = location
   }
   speak(){
-    `Hello my name is ${this.name} and I am from ${this.location}`
+    return `Hello my name is ${this.name}, I am from ${this.location}`
   }
 }
 
@@ -135,11 +135,11 @@ class Lambdasian {
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
 class Instructor extends Lambdasian{
-constructor({name, age, location, speciality, favLanguage, catchphrase}){
-  super({name, age, location, speciality, favLanguage, catchphrase});
-  this.speciality = speciality
+constructor({name, age, location, specialty, favLanguage, catchPhrase}){
+  super({name, age, location, specialty, favLanguage, catchPhrase});
+  this.specialty = specialty
   this.favLanguage = favLanguage
-  this. catchphrase = catchphrase
+  this. catchPhrase = catchPhrase
 }
 demo(subject){
 return `Today we are learning about ${subject}`
@@ -174,10 +174,10 @@ class Student extends Lambdasian {
    listSubjects(){
 return `Loving ${this.favSubjects}`
    }
-   PRAssignments(subject){
+   PRAssignment(subject){
 return `${this.name} has submitted a PR for ${subject}`
    }
-   sprintchallenge(subject){
+   sprintChallenge(subject){
 return `${this.name} has begun sprint challenge on ${subject}`
    }
 }
@@ -196,8 +196,8 @@ return `${this.name} has begun sprint challenge on ${subject}`
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 class ProjectManager extends Instructor {
-   constructor({name, age, location, specialty, favLanguage, catchphrase, gradClassName, favInstructor}){
-     super({name, age, location, specialty, favLanguage, catchphrase, gradClassName, favInstructor})
+   constructor({name, age, location, specialty, favLanguage, catchPhrase, gradClassName, favInstructor}){
+     super({name, age, location, specialty, favLanguage, catchPhrase, gradClassName, favInstructor})
      this.gradClassName = gradClassName
      this.favInstructor = favInstructor
    }
